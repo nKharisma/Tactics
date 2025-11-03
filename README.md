@@ -1,6 +1,6 @@
 # Isometric Turn-Based Strategy (C++ / SDL2)
 
-Compact turn-based isometric strategy prototype written in C++ using SDL2.  
+A turn-based isometric strategy prototype written in C++ using SDL2.  
 Features: isometric tile map rendering, A* pathfinding, turn manager, simple AI, UI buttons, sprite atlas-based animations.
 
 ## Features
@@ -65,7 +65,8 @@ Adjust file list or use a build system (Makefile / CMake) for larger projects.
 - UI shows current turn in top-right.
 
 ## Troubleshooting
-- "Parameter 'texture' is invalid" — a texture was null/invalid. Check atlas loading and that texture assets are in correct path.  
+- "Parameter 'texture' is invalid" — a texture was null/invalid. Check atlas loading and that texture assets are in correct path.
+- Output file with debug statements though these might get removed later
 - Multiple "Game cleaned up successfully" — ensure cleanup is called once at shutdown.
 
 ## Suggested next improvements
