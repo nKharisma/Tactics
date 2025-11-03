@@ -73,8 +73,5 @@ Adjust file list or use a build system (Makefile / CMake) for larger projects.
 - Add health bars, sound, more AI behaviors, save/load, and a main menu.  
 - Add CMake or a proper build system.
 
-## Contributing
-- Fork, add features/fixes, and submit PRs. Keep changes modular: assets, animations, AI, or UI.
-
 ## TODO
 Cleanup coding structure on multiple files, get rid of debugging lines, expand upon combat system
