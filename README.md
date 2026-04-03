@@ -2,6 +2,8 @@
 
 Written by Me: SeNiah McField
 
+![Tactics Gameplay Screenshot](images/tactics_preview.png)
+
 A turn-based isometric strategy prototype written in C++ using SDL2.  
 Features: isometric tile map rendering, A* pathfinding, turn manager, simple AI, UI buttons, sprite atlas-based animations.
 
