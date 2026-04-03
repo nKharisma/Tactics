@@ -50,12 +50,6 @@ public:
 	bool IsCurrentUnit(Unit* unit) const {
 		return m_units[m_currentUnitIndex] == unit;
 	}
-
-	/*
-	bool IsCurrentUnitAI() const {
-		if (m_units.empty()) return false;
-		return m_units[m_currentUnitIndex]->IsAIControlled();
-	}*/
 	
 private:
 	std::vector<Unit*> m_units;

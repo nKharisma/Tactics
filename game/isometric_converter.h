@@ -21,4 +21,4 @@ private:
 	int m_offsetY;
 };
 
-#endif // ISOMETRIC_CONVERTER_H
+#endif

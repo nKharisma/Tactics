@@ -14,7 +14,8 @@ std::vector<SDL_Point> aStar::FindPath(int startX, int startY, int endX, int end
     }
 
     Node* startNode = new Node{startX, startY, 0, Heuristic(startX, startY, endX, endY), nullptr};
-
+    
+    // sorting based on fCost, then hCost as tiebreaker
     auto compare = [](Node* left, Node* right) { 
         if (left->fCost() == right->fCost()) {
             return left->hCost > right->hCost;
@@ -68,7 +69,8 @@ std::vector<SDL_Point> aStar::FindPath(int startX, int startY, int endX, int end
             }
         }
     }
-
+    
+    //cleanup of all allocated nodes
     for (Node* n : allNodes) {
         delete n;
     }
@@ -90,6 +92,7 @@ std::vector<SDL_Point> aStar::ReconstructPath(Node* node) {
     return path;
 }
 
+// manhatten distance heuristic
 int aStar::Heuristic(int x1, int y1, int x2, int y2) {
     return std::abs(x1 - x2) + std::abs(y1 - y2);
 }

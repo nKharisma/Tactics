@@ -14,6 +14,7 @@ Unit::Unit(const std::string& name, int health, int attackPower, int defense, in
 }
 
 void Unit::Update(double deltaTime, Map& map, aStar& pathfinder) {
+    // update animation state 
     Animation& currAnim = m_animations[m_animationState];
     currAnim.elapsedTime += deltaTime;
 
@@ -31,7 +32,7 @@ void Unit::Update(double deltaTime, Map& map, aStar& pathfinder) {
             currAnim.currentFrame = (currAnim.currentFrame + 1) % currAnim.frames.size();
         }
     }
-    movementTimer = 0.0;
+    static double movementTimer = 0.0;
     movementTimer += deltaTime;
 
     if (!m_path.empty() && movementTimer >= 0.2) {
